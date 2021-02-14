@@ -41,7 +41,6 @@ function writePassword() {
 
 // generate password
 function generatePassword() {
-// all options are selected
   let letters = [];
   for (let i = 0; i < 4 ; i++) {
     if (cap && !letters.includes(upperCase)) {
