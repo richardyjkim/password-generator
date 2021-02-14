@@ -2,7 +2,7 @@
 let generateBtn = document.querySelector("#generate");
 
 // Setting
-let plength = Number(prompt ("How many characters would you like your password to be?"));
+let pLengthString = Number(prompt ("How many characters would you like your password to be?"));
 let lowerCase = "abcdefghijklmnopqrstuvwxyz"
 let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let number = "1234567890"
@@ -12,18 +12,18 @@ let low = false;
 let num = false;
 let spec = false;
 let firstTime = true;
-let newPlength;
+let pLengthInt;
 
 // Password Intro
-while (isNaN(plength) || plength < 8 || plength > 128)
+while (isNaN(pLengthString) || pLengthString < 8 || pLengthString > 128)
   Number(prompt("Length must be 8-128 characters!"));
 
 while (!cap && !low && !num && !spec) {
   if (!firstTime) {
     alert("You must select at least one charater type!");
   }
-  if (plength >= 8 && plength <= 128) {
-    newPlength = parseInt(plength);
+  if (pLengthString >= 8 && pLengthString <= 128) {
+    pLengthInt = parseInt(pLengthString);
   }
   cap = confirm("Would you like to use uppercase letters?");
   low = confirm("Would you like to use lowercase letters?");
@@ -47,17 +47,16 @@ function generatePassword() {
   if (cap && low && num && spec) {
     let all = upperCase + lowerCase + number + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
-      
       return password;
       // C L N
   } else if (cap && low && num && !spec) {
     let all = upperCase + lowerCase + number;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -66,7 +65,7 @@ function generatePassword() {
   } else if (cap && low && !num && !spec) {
     let all = upperCase + lowerCase;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -75,7 +74,7 @@ function generatePassword() {
   } else if (cap && !low && !num && !spec) {
     let all = upperCase;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -84,7 +83,7 @@ function generatePassword() {
   } else if (!cap && low && num && spec) {
     let all = lowerCase + number + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -93,7 +92,7 @@ function generatePassword() {
   } else if (!cap && low && num && !spec) {
     let all = lowerCase + number;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -102,7 +101,7 @@ function generatePassword() {
   } else if (!cap && low && !num && !spec) {
     let all = lowerCase;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -111,7 +110,7 @@ function generatePassword() {
   } else if (!cap && !low && num && spec) {
     let all = number + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -120,7 +119,7 @@ function generatePassword() {
   } else if (!cap && !low && num && !spec) {
     let all = number;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -129,7 +128,7 @@ function generatePassword() {
   } else if (!cap && !low && !num && spec) {
     let all = special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -138,7 +137,7 @@ function generatePassword() {
   } else if (cap && !low && !num && spec) {
     let all = upperCase + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -147,7 +146,7 @@ function generatePassword() {
   } else if (cap && !low && num && !spec) {
     let all = upperCase +number;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
@@ -156,23 +155,25 @@ function generatePassword() {
   } else if (!cap && low && !num && spec) {
     let all = lowerCase + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
       return password;
+      // C L S
   } else if (cap && low && !num && spec) {
     let all = upperCase + lowerCase + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
       return password;
+      // C N S
   } else if (cap && !low && num && spec) {
     let all = upperCase + number + special;
     let password= "";
-      for (let i = 0; i <newPlength; i++) {
+      for (let i = 0; i <pLengthInt; i++) {
         let proto = Math.floor(Math.random() * all.length);
         password += all[proto]; 
       }
