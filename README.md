@@ -1,48 +1,93 @@
-# 03 JavaScript: Password Generator
+# Password Generator
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+## Description 
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+Hi, 
 
-## User Story
+Need Strong, secure Password?
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+Here we generate new strong secure password.
+Just selcet whichever charater you would like to add and we generate it for you
 
-## Acceptance Criteria
+## Table of Contents (Optional)
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
 
-The following image demonstrates the application functionality:
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technology](#technology)
+* [Credits](#credits)
+* [License](#license)
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Review
+## Installation
 
-You are required to submit the following for review:
+- Please visit Website https://richardyjkim.github.io/password-generator
 
-* The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Usage 
 
-- - -
+
+![alt text](./screenshot/ss6.png)
+
+-Simply press "Genarate Password" to obtaine yor need.
+but before that you are asked to answer following
+
+![alt text](./screenshot/ss1.png)
+
+-Length must between 8-128 
+
+![alt text](./screenshot/ss2.png)
+
+-Do you want Uppercase Letter?
+
+![alt text](./screenshot/ss3.png)
+
+-How about lowercase?
+
+![alt text](./screenshot/ss4.png)
+
+-Numbers?
+
+![alt text](./screenshot/ss5.png)
+
+-Special Characters?
+
+![alt text](./screenshot/ss7.png)
+-If you did not select the proper length or choose not to select all 4 type, we will be asking you again to select proper length.
+
+![alt text](./screenshot/ss8.png)
+-In case the following charater is not added to your password. I use chararter && !letters.include to push the certain chararteristc forcely, if its not included.
+
+## Technology
+    -Java Script
+
+## Credits
+
+ - Richard Kim: richardyjkim (github)
+
+
+## License
+
+MIT License
+
+Copyright (c) [2021] [Richard Y Kim]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
