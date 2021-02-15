@@ -53,9 +53,11 @@ but before that you are asked to answer following
 -Special Characters?
 
 ![alt text](./screenshot/ss7.png)
+
 -If you did not select the proper length or choose not to select all 4 type, we will be asking you again to select proper length.
 
 ![alt text](./screenshot/ss8.png)
+
 -In case the following charater is not added to your password. I use chararter && !letters.include to push the certain chararteristc forcely, if its not included.
 
 ## Technology
